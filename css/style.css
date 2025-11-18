@@ -1,0 +1,687 @@
+@charset "UTF-8";
+.main-header {
+  background-color: #34495e;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 5px solid #e74c3c;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.site-title-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.site-title-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  /* 画像が枠に収まるようにするための設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-title-icon img {
+  /* 親要素のサイズに合わせる */
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* 画像が歪まずに収まるようにする */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.main-nav li a:hover {
+  background-color: #4a637d; /* ホバーで色を変える */
+}
+
+.main-footer {
+  /* ヘッダーの背景色より少し明るい色を使用 */
+  background-color: #4a637d;
+  color: #ecf0f1; /* 明るい文字色 */
+  padding: 25px 0;
+  margin-top: 50px; /* コンテンツとの間にスペースを空ける */
+  font-size: 0.9rem;
+  border-top: 3px solid #e74c3c; /* ヘッダーのラインと対応させる */
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between; /* 情報を左右に分ける */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* サイト情報（アイコンと著作権） */
+.site-info {
+  display: flex;
+  align-items: center;
+}
+
+.site-info .site-title-icon {
+  /* ヘッダーと同じアイコンサイズを流用 */
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.site-info .site-title-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.copyright {
+  margin: 0;
+}
+
+/* フッターリンクとデータ提供元 */
+.footer-links {
+  text-align: right; /* 情報を右寄せ */
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-left: 15px; /* リンク間にスペース */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f1c40f; /* ポケモンらしい黄色をホバー色に使用 */
+}
+
+.data-source {
+  margin-top: 5px;
+  color: #bdc3c7; /* 少し控えめな文字色 */
+}
+
+/* resset.dev • v5.0.2 */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+* {
+  padding: 0; /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+hr {
+  overflow: visible; /* Show the overflow in Edge and IE */
+  height: 0; /* Add the correct box sizing in Firefox */
+  color: inherit; /* Correct border color in Firefox. */
+}
+
+details,
+main {
+  display: block; /* Render the `main` element consistently in IE. */
+}
+
+summary {
+  display: list-item; /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%; /* Set font-size to 80% in `small` elements */
+}
+
+[hidden] {
+  display: none; /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: none; /* Remove the bottom border in Chrome 57 */
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari */
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+a {
+  background-color: transparent; /* Remove the gray background on active links in IE 10 */
+}
+
+a:active,
+a:hover {
+  outline-width: 0; /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* Specify the font family of code elements */
+}
+
+pre {
+  font-size: 1em; /* Correct the odd `em` font sizing in all browsers */
+}
+
+b,
+strong {
+  font-weight: bolder; /* Add the correct font weight in Chrome, Edge, and Safari */
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-color: inherit; /* Correct border color in all Chrome, Edge, and Safari. */
+  text-indent: 0; /* Remove text indentation in Chrome, Edge, and Safari */
+}
+
+iframe {
+  border-style: none;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto; /* Correct the cursor style of increment and decrement buttons in Chrome */
+}
+
+[type=search] {
+  -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px; /* Correct the outline style in Safari */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove the inner padding in Chrome and Safari on macOS */
+}
+
+textarea {
+  overflow: auto; /* Internet Explorer 11+ */
+  resize: vertical; /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold; /* Restore the font weight unset by the previous rule */
+}
+
+button {
+  overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+button,
+select {
+  text-transform: none; /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button] {
+  cursor: pointer;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline-width: 0;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none; /* Firefox 36+ */
+  -webkit-appearance: none; /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none; /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor; /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge and IE */
+  white-space: normal; /* Correct the text wrapping in Edge and IE */
+  max-width: 100%; /* Correct the text wrapping in Edge 18- and IE */
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari */
+  -webkit-appearance: button;
+  color: inherit;
+  font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Specify the progress cursor of updating elements */
+[aria-busy=true] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled=true] {
+  cursor: default;
+}
+
+html {
+  font-family: "WDXL Lubrifont JP N", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(162, 235, 235);
+}
+body h1 {
+  text-align: center;
+  margin-block-start: 2rem;
+  margin-block-end: 50px 5px;
+}
+body #today {
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 30px;
+}
+body .news-article-wrap {
+  display: flex;
+  flex-direction: column;
+}
+body .today-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-inline: 20px;
+}
+@media (max-width: 500px) {
+  body .today-wrap {
+    flex-direction: column;
+    /* 縦並びになった際に、横幅いっぱいに広がるよう調整 */
+  }
+  body .today-wrap .news-article-wrap,
+  body .today-wrap #pokemon-info-container {
+    width: 100%;
+  }
+}
+body .today-wrap #news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  margin-block-end: 15px;
+  margin-inline-end: 0;
+}
+body .today-wrap #news-container::before {
+  content: ""; /* 疑似要素には content が必須 */
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/monsterball01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+body .today-wrap #news-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8.5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f7f7f7;
+  transform: translateY(-50%);
+}
+@media (max-width: 500px) {
+  body .today-wrap #news-container::after {
+    content: "";
+    top: auto;
+    bottom: -10px;
+    right: auto;
+    left: 50%;
+    border-width: 10px 10px 0 10px;
+    border-color: #f7f7f7 transparent transparent transparent;
+    transform: translateX(-50%);
+  }
+}
+body .today-wrap #pokemon-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body .today-wrap #pokemon-image {
+  width: 250px;
+  height: 250px;
+}
+body .today-wrap #pokemon-name {
+  margin-block-start: 10px;
+}
+body #luckyColor {
+  text-align: center;
+  margin-block-start: 100px;
+  margin-block-end: 30px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+body .lucky-color-section-wrapper {
+  text-align: center;
+  /* 浮かび上がるカードデザイン */
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+}
+body .button-wrap {
+  display: flex;
+  justify-content: center;
+}
+body .button-wrap #colorBtn {
+  display: block;
+  padding-block: 1.2rem;
+  padding-inline: 3rem;
+  border-radius: 3rem;
+  color: white;
+  background-color: rgb(175, 228, 128);
+  border: none;
+  cursor: pointer;
+  /* 立体的な影 */
+  box-shadow: 0 5px 0 0 rgb(60, 110, 30);
+  transition: all 0.1s;
+}
+body .button-wrap #colorBtn:hover {
+  color: white;
+  background-color: rgb(98, 182, 105);
+}
+body .button-wrap #colorBtn:active {
+  /* クリック時の押し込みエフェクト */
+  transform: translateY(5px);
+  box-shadow: 0 0 0 0 rgb(60, 110, 30);
+}
+body #display-color {
+  display: none;
+  visibility: hidden;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-block: 30px;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  display: inline-block;
+}
+body .is-visible {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+body .color-highlight {
+  font-size: 1.8rem;
+  font-weight: 900;
+  padding-inline: 5px;
+  margin-inline: 3px;
+}
+body #pokeColor-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-block-start: 30px;
+}
+body .pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+}
+body .pokemon-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid #c1bebe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-block-start: 50px;
+  margin-block-end: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+}
+body #animation-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-block: 20px;
+}
+body #animation-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+@keyframes burst-effect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes spark-burst {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    box-shadow: 0 0 0 0 gold, 0 0 0 0 gold, 0 0 0 0 orange, 0 0 0 0 red;
+  }
+  100% {
+    box-shadow: 50px 50px 8px gold, -70px -70px 6px #ffeb3b, 80px -20px 7px orange, -30px 60px 5px red, 40px 0 4px yellow; /* ★ 追加：右中央に小さな粒を飛ばす */
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+body .bursting {
+  animation: burst-effect 0.5s forwards;
+  position: relative;
+}
+body .bursting #anim-img {
+  animation: burst-effect 0.5s forwards;
+}
+body .bursting::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  animation: spark-burst 0.5s forwards;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 10;
+}
+body #to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+body #to-top-btn:hover {
+  background-color: #c0392b;
+}/*# sourceMappingURL=style.css.map */

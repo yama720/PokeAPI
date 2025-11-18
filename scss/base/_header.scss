@@ -1,0 +1,64 @@
+//ヘッダーデザイン
+.main-header {
+  background-color: #34495e;
+  color: white;
+  padding: 15px 0;
+  border-bottom: 5px solid #e74c3c;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; //コンテンツの最大幅
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+//サイトタイトル
+.site-title-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.site-title-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  /* 画像が枠に収まるようにするための設定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-title-icon img {
+  /* 親要素のサイズに合わせる */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 画像が歪まずに収まるようにする */
+}
+
+//ナビゲーション
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.main-nav li a:hover {
+  background-color: #4a637d; /* ホバーで色を変える */
+}

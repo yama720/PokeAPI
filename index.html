@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter ⚪</title>
+    <meta name="description" content="JavaScriptの教科書を進めています。" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <header class="main-header">
+    <div class="header-inner">
+      <a href="/" class="site-title-link">
+        <span class="site-title-icon">
+          <img src="/images/monsterball01.png" alt="モンスターボール"
+        /></span>
+        <span class="site-title-text">Today</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#luckyColor">今日の占い</a></li>
+          <li><a href="#">図鑑</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <body>
+    <h1>本日のニュース</h1>
+    <h2 id="today"></h2>
+    <div class="today-wrap">
+      <div class="news-article-wrap">
+        <div class="News-wrap">
+          <pre id="News"></pre>
+          <div id="news-container"></div>
+        </div>
+      </div>
+
+      <div id="pokemon-info-container">
+        <img
+          id="pokemon-image"
+          src=""
+          alt="ポケモン画像"
+          style="display: none"
+        />
+        <p id="pokemon-name"></p>
+      </div>
+    </div>
+
+    <h2 id="luckyColor">今日のラッキーカラーを占う</h2>
+    <div class="lucky-color-section-wrapper">
+      <div class="button-wrap"><button id="colorBtn">ボタン</button></div>
+      <p id="display-color"></p>
+    </div>
+
+    <div id="pokeColor-results">
+      <div id="animation-placeholder"></div>
+    </div>
+
+    <a href="#" id="to-top-btn" title="ページ上部に戻る">&#9650;</a>
+  </body>
+
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <div class="site-info">
+        <span class="site-title-icon">
+          <img src="/images/monsterball01.png" alt="モンスターボール" />
+        </span>
+        <p class="copyright">&copy; 2025 Daily Pokémon</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+        <p class="data-source">データ提供: PokeAPI, NEWSDATA.IO</p>
+      </div>
+    </div>
+  </footer>
+</html>
